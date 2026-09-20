@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kairos-execution"
+version = "0.1.0"
+description = "Kairos Execution —— 自研轻量级交易执行框架（内存 OMS + 执行算法 + TCA，纯模拟）"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Bruce848647703" }]
+keywords = ["quant", "execution", "oms", "twap", "vwap", "tca", "simulation"]
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["kairos_execution"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
