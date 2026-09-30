@@ -7,3 +7,11 @@ build/
 dist/
 .ipynb_checkpoints/
 .DS_Store
+
+# research 产物：默认忽略，但放开 real_execution 的报告与结果入库
+research/*
+!research/real_execution/
+research/real_execution/*
+!research/real_execution/*.md
+!research/real_execution/*.json
+!research/real_execution/*.csv

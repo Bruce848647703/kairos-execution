@@ -9,6 +9,7 @@
 - :mod:`algos`  : 执行算法（TWAP / VWAP / Iceberg / ImplementationShortfall）。
 - :mod:`tca`    : 交易成本分析（到达价 / 滑点 / 成交率 / 价差 / 冲击 / 实现差额）。
 - :mod:`sim`    : 合成 OHLCV 行情（离线、固定 seed 可复现）。
+- :mod:`realdata`: 真实 A 股日线 CSV（后复权 hfq）→ Bar 序列（只读、离线）。
 
 设计原则：纯 numpy/pandas 依赖、确定性、可扩展、面向模拟与教学，不做实盘下单。
 """
@@ -43,6 +44,7 @@ from .tca import (
     slippage_bps,
 )
 from .sim import make_ohlcv, to_bars
+from .realdata import load_bars, load_ohlcv_frame
 
 __version__ = "0.1.0"
 
@@ -60,5 +62,7 @@ __all__ = [
     "realized_spread_bps", "market_impact_bps", "delay_cost_bps", "benchmark_vwap",
     # sim
     "make_ohlcv", "to_bars",
+    # realdata
+    "load_bars", "load_ohlcv_frame",
     "__version__",
 ]
