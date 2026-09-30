@@ -1,5 +1,7 @@
 # Kairos Execution
 
+[![CI](https://github.com/Bruce848647703/kairos-execution/actions/workflows/ci.yml/badge.svg)](https://github.com/Bruce848647703/kairos-execution/actions/workflows/ci.yml)
+
 > Kairos 量化系列的**交易执行**模块 —— 一个**自研、轻量、纯内存模拟**的执行框架（OMS + 执行算法 + TCA）。
 
 `kairos_execution` 提供订单管理系统（状态机 + 事件日志）、模拟券商撮合（成交延迟、参与率部分成交、滑点、限价/止损）、
